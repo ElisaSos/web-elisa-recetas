@@ -1,50 +1,107 @@
-body{
-    font-family: "DM Serif Text", serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Prata", serif;
     font-weight: 400;
-    font-style: normal,italic;
+    font-style: normal;;
 }
-.Row{
-    max-width: 1440px;
-    margin: 0 auto
+/* Estilo general */
+header{
+    background-color: #d6baba;
+    width: 100%;
+    height: 150px;
+    align-content: space-around;
+    justify-content: space-around;
 }
 
-.rosa{
-    background-color: rgb(218, 140, 179);
-    color: rgb(243, 240, 241);
-}
 .bienvenida{
+    margin: 12px;
+    color: #d6baba;
+    gap: 32px;
+}
+nav ul li a{
+    color: rgb(230, 210, 210);
+    text-decoration: none ;/* quita subrayado*/
+    padding: 0.5rem 1rem;
+    border-radius: 4px;  /* los hace ver como botones*/
+    transition: all 0.3s ease;
+    list-style: none;
+    gap: 32px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  button {
+    background-color: #d6baba;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-search{
+    background-color: #d6baba;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #c49ab4;
+  }
+  
+  /* Fullscreen */
+  .fullscreen-hidden {
+    display: none;
+  }
+  
+  #fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(202, 194, 194, 1);
+    color: #0e0d0d;
     display: flex;
-    align-content: end;
-}
-.bienvenida img{
-    width: 20%;
-}
-
-#inicio{
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    font-style: normal; color: rgb(116, 100, 46);
-    align-content: normal;
-    font-size: 30px;
-}
-
-#BLUEBERRY{
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    font-style: normal;color: rgb(185, 156, 212);
-    font-size: 30px;
-}
-
-#frambuesa{
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    font-style: normal;color: rgb(177, 130, 167);
-    font-size: 30px;
-}
-
-#Manzana{
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    font-style: normal;color: rgb(130, 177, 136);
-    font-size: 30px;
+    justify-content: start;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto;
+  }
+  
+  .fullscreen-content {
+    text-align: justify;
+    padding: 20px;
+  }
+  
+  #cerrar {
+    background-color: #d6baba;
+    margin-top: 20px;
+    align-items: end;
+  }
+  
+footer{
+    background-color: lightpink;
+    text-align: center;
+    align-items: center;
 }
