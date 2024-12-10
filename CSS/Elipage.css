@@ -38,68 +38,128 @@ body {
     align-items: center;
     height: 100vh;
   }
+  body.no-scroll {
+    overflow: hidden; /* Evita el scroll en la página principal */
+  }
+  
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px; /* Opcional: Limitar el ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+  }
   
   .card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
     padding: 20px;
-    text-align: center;
-    max-width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+  }
+  .card .main-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Visible por defecto */
+    align-items: center;
   }
   
-  button {
-    background-color: #d6baba;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .btn-search{
-    background-color: #d6baba;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+  .card.fullscreen .main-image {
+    display: none; /* Oculta la imagen en fullscreen */
   }
   
-  button:hover {
-    background-color: #c49ab4;
+  
+  .card h2 {
+    margin: 0 0 10px;
   }
   
-  /* Fullscreen */
-  .fullscreen-hidden {
+  .card .extra-info {
     display: none;
   }
   
-  #fullscreen {
+  .card.fullscreen {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    border-radius: 0;
+    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(202, 194, 194, 1);
-    color: #0e0d0d;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    z-index: 1000;
+    background-color: #fff;
     overflow: auto;
   }
-  
-  .fullscreen-content {
-    text-align: justify;
-    padding: 20px;
+  .card.fullscreen .close-btn {
+    position: fixed; /* Fija el botón en la pantalla */
+    top: 20px;       /* Ajusta la distancia desde la parte superior */
+    right: 20px;     /* Ajusta la distancia desde el lado derecho */
+    z-index: 1100;   /* Asegúrate de que esté por encima del contenido */
+    background-color: #645c5c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
-  #cerrar {
-    background-color: #d6baba;
+  .card.fullscreen .extra-info {
+    display: block;
     margin-top: 20px;
-    align-items: end;
+    max-height: calc(100vh - 80px); /* Ajusta al alto de la ventana menos los márgenes */
+     overflow-y: auto;              /* Habilita el scroll dentro de esta sección */
+    padding: 20px;
+    
+    
+  }
+  .card.fullscreen .close-btn:hover {
+    background-color: #dfc2c2;
+  }
+  .card.fullscreen a {
+    color: #ebcdd9; 
+    text-decoration: underline; /* Añade subrayado */
+    position: relative; /* Garantiza que esté por encima del fondo */
+    z-index: 10;       /* Ajusta según sea necesario */
+    display: inline-block;
+    
   }
   
+  .card.fullscreen a:hover {
+    color: #a33e66; 
+    text-decoration: none; /* Opcional: elimina el subrayado al pasar el ratón */
+  }
+  button{
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #d6baba;
+    box-shadow: #645c5c 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    align-items: center;
+    justify-items: center;
+  }
+  button:hover{
+    letter-spacing: 3px;
+    background-color: #a33e66;
+    color: #fff;
+    box-shadow: #a33e66 0px 7px 29px 0px;
+  }
+  button :active{
+    letter-spacing: 3px;
+    background-color: #a33e66;
+    color: #fff;
+    box-shadow: #a33e66 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
 footer{
     background-color: lightpink;
     text-align: center;
