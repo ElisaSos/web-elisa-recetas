@@ -4,30 +4,147 @@
     box-sizing: border-box;
     font-family:"Prata", serif;
     font-weight: 400;
-    font-style: normal;;
+    font-style: normal;
+    font-size: 1rem;
 }
 /* Estilo general */
 header{
-    background-color: #d6baba;
+    background-color: #f0edd7;
     width: 100%;
     height: 150px;
-    align-content: space-around;
     justify-content: space-around;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .bienvenida{
     margin: 12px;
-    color: #d6baba;
     gap: 32px;
 }
-nav ul li a{
-    color: rgb(230, 210, 210);
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+}
+nav ul li a {
+    color:#49483a;
     text-decoration: none ;/* quita subrayado*/
     padding: 0.5rem 1rem;
     border-radius: 4px;  /* los hace ver como botones*/
     transition: all 0.3s ease;
-    list-style: none;
-    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: #4b4141;
+}
+nav ul li a :hover {
+background-color: #cec2a1;
+}
+
+nav ul li,
+nav ul form { /* Incluye el formulario con el botón en el selector */
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a,
+nav ul form button { /* Combina los estilos para el enlace y el botón */
+  color: #0c0b0b;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  /* Quita los estilos que no quieres: */
+  border: none; /* Quita la borde */
+  background: none; /* Quita el fondo */
+  border-radius: 0; /* Quita los bordes redondeados */
+}
+.boton-busqueda{
+   padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color:#cec2a1;
+    box-shadow: #4b4141 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    align-items: center;
+    justify-items: center;
+}
+.boton-busqueda :hover{
+  letter-spacing: 3px;
+  background-color: #cec2a1;
+  color: #0c0c0c;
+  box-shadow: #49483a 0px 7px 29px 0px;
+}
+.boton-busqueda  button:active{
+  letter-spacing: 3px;
+    background-color: #4b4141;
+    color: #0c0b0b;
+    box-shadow: #4b4141 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+.search form{
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 2rem;
+  height: 4.4rem;
+  overflow: hidden;
+}
+.search form button input{
+  outline: none;
+  border: none;
+  color: #0c0b0b;
+  cursor: pointer;
+}
+.search form button input ::-webkit-search-cancel-button{
+appearance: none;
+}
+input {
+  all: unset; /* Reseta todas las propiedades */
+  /* O, de forma más específica: */
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+.row{
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  height: 350px;
+}
+.rosa{
+  background-color: #cec2a1;
+  color: white;
+}
+.text{
+  max-width: 400px;
+  margin: auto;
+  font-size: 20px;
+}
+.text h2{
+  font-size: 1.875rem;
+}
+.text p{
+  font-size: 1.2rem;
+  justify-content: center;
+}
+.content{
+  text-align: start;
+  justify-content: center;
+}
+.content img{
+  width: 700px;
+  height: auto;
+  display: block; /* Visible por defecto */
+  align-items: center;
 }
 body {
     font-family: Arial, sans-serif;
@@ -100,7 +217,7 @@ body {
     top: 20px;       /* Ajusta la distancia desde la parte superior */
     right: 20px;     /* Ajusta la distancia desde el lado derecho */
     z-index: 1100;   /* Asegúrate de que esté por encima del contenido */
-    background-color: #645c5c;
+    background-color: #ffced2;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -118,10 +235,10 @@ body {
     
   }
   .card.fullscreen .close-btn:hover {
-    background-color: #dfc2c2;
+    background-color: #ffced2;
   }
   .card.fullscreen a {
-    color: #ebcdd9; 
+    color: #ffced2; 
     text-decoration: underline; /* Añade subrayado */
     position: relative; /* Garantiza que esté por encima del fondo */
     z-index: 10;       /* Ajusta según sea necesario */
@@ -137,8 +254,8 @@ body {
     padding: 17px 40px;
     border-radius: 50px;
     border: 0;
-    background-color: #d6baba;
-    box-shadow: #645c5c 0 0 8px;
+    background-color:#d6baba;
+    box-shadow: #4b4141 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-size: 15px;

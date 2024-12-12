@@ -42,4 +42,4 @@ document.querySelectorAll('.card').forEach((card) => {
     closeBtn.style.display = 'none'; // Oculta el botón de cerrar
   });
 });
-    
+  
