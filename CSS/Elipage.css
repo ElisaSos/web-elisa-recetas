@@ -40,7 +40,7 @@ nav ul li a {
     box-shadow: #4b4141;
 }
 nav ul li a :hover {
-background-color: #cec2a1;
+background-color: #c5b8b8;;
 }
 
 nav ul li,
@@ -75,8 +75,7 @@ nav ul form button { /* Combina los estilos para el enlace y el botón */
 .boton-busqueda :hover{
   letter-spacing: 3px;
   background-color: #cec2a1;
-  color: #0c0c0c;
-  box-shadow: #49483a 0px 7px 29px 0px;
+
 }
 .boton-busqueda  button:active{
   letter-spacing: 3px;
@@ -146,6 +145,7 @@ input {
   display: block; /* Visible por defecto */
   align-items: center;
 }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -154,6 +154,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    scroll-behavior: smooth;
   }
   body.no-scroll {
     overflow: hidden; /* Evita el scroll en la página principal */
@@ -171,6 +172,7 @@ body {
   }
   
   .card {
+    display: flex;
     width: 300px;
     padding: 20px;
     background-color: #fff;
@@ -179,12 +181,23 @@ body {
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card h3 {
+    color: #cec2a1;
+  }
+  .card p{
+    color: #cec2a1;
   }
   .card .main-image {
     width: 100%;
     height: auto;
     display: block; /* Visible por defecto */
     align-items: center;
+    object-fit: cover;
+    object-position: top;
   }
   
   .card.fullscreen .main-image {
@@ -194,10 +207,16 @@ body {
   
   .card h2 {
     margin: 0 0 10px;
+    text-align: center;
+    line-height: 1.8;
   }
   
   .card .extra-info {
     display: none;
+    letter-spacing: 1px;
+    word-spacing: 1,5px;
+    line-height: 1.8;
+    text-align: justify;
   }
   
   .card.fullscreen {
@@ -231,11 +250,16 @@ body {
     max-height: calc(100vh - 80px); /* Ajusta al alto de la ventana menos los márgenes */
      overflow-y: auto;              /* Habilita el scroll dentro de esta sección */
     padding: 20px;
-    
-    
   }
   .card.fullscreen .close-btn:hover {
-    background-color: #ffced2;
+    background-color: #cec2a1;
+  }
+  .card.button .expand-btn{
+    text-align: center;
+    align-items: center;
+    top: 5px;
+    display: flex;
+    margin: 0 auto; /* Centra el botón */
   }
   .card.fullscreen a {
     color: #ffced2; 
@@ -248,13 +272,13 @@ body {
   
   .card.fullscreen a:hover {
     color: #a33e66; 
-    text-decoration: none; /* Opcional: elimina el subrayado al pasar el ratón */
+    text-decoration: none; /* elimina el subrayado al pasar el ratón */
   }
   button{
     padding: 17px 40px;
     border-radius: 50px;
     border: 0;
-    background-color:#d6baba;
+    background-color:#ffced2;
     box-shadow: #4b4141 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -262,23 +286,37 @@ body {
     transition: all .5s ease;
     align-items: center;
     justify-items: center;
+    display: flex;
   }
+
   button:hover{
     letter-spacing: 3px;
-    background-color: #a33e66;
+    background-color: #cec2a1;
     color: #fff;
-    box-shadow: #a33e66 0px 7px 29px 0px;
+    box-shadow: #cec2a1 0px 7px 29px 0px;
   }
   button :active{
     letter-spacing: 3px;
-    background-color: #a33e66;
+    background-color: #cec2a1;
     color: #fff;
-    box-shadow: #a33e66 0px 0px 0px 0px;
+    box-shadow: #cec2a1 0px 0px 0px 0px;
     transform: translateY(10px);
     transition: 100ms;
   }
+  #Contactanos{
+    text-align: center;
+    align-items: center;
+    scroll-behavior: smooth;
+  }
+
+
+  @media screen {
+
+    
+  }
+
 footer{
-    background-color: lightpink;
+    background-color: #f0edd7;
     text-align: center;
     align-items: center;
 }
