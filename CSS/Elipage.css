@@ -5,7 +5,7 @@
     font-family:"Prata", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 15px;
 }
 /* Estilo general */
 header{
@@ -14,7 +14,8 @@ header{
     height: 150px;
     justify-content: space-around;
     align-content: center;
-    display: flex;
+    display: grid;
+    grid-column: 1 / span 1; /* Ocupa toda la columna */
     flex-wrap: wrap;
     margin: 0 auto;
 }
@@ -118,6 +119,7 @@ input {
   margin: 0 auto;
   margin-bottom: 2rem;
   height: 350px;
+  grid-column: 1 / span 1; /* Ocupa toda la columna */
 }
 .rosa{
   background-color: #cec2a1;
@@ -142,8 +144,9 @@ input {
 .content img{
   width: 700px;
   height: auto;
-  display: block; /* Visible por defecto */
-  align-items: center;
+  display:flex;
+  align-content: center;
+  object-fit: cover;
 }
 
 body {
@@ -309,14 +312,53 @@ body {
     scroll-behavior: smooth;
   }
 
-
-  @media screen {
-
-    
-  }
-
 footer{
     background-color: #f0edd7;
     text-align: center;
     align-items: center;
+}
+
+@media (max-width: 780px) {
+  /* Adjustments for small screens */
+
+  header {
+    height: auto; /* Adjust height as needed */
+    grid-template-columns: 1fr; /* Stack elements vertically */
+  }
+
+  .row {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .text, .content img {
+    /* Adjust width or other styles for smaller screens */
+  }
+  .cards-container {
+    /* ... */
+    margin: 0 auto;
+}
+  .content img {
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  /* Adjustments for medium screens */
+
+  header {
+    /* Adjust styles for tablets */
+  }
+
+  .row {
+    /* Adjust styles for tablets */
+  }
+  .cards-container {
+    /* ... */
+    margin: 0 auto;}
+
+  .content img {
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente */
+  }
 }

@@ -62,3 +62,19 @@ footer{
     text-align: center;
     align-items: center;
 }
+
+/* Media query para pantallas medianas */
+@media (min-width: 768px) and (max-width: 992px) {
+    .content {
+      flex-direction: row; /* Volvemos a la disposición horizontal */
+      justify-content: space-between;
+    }
+  
+    .content img {
+      width: 45%; /* Ajusta el ancho de la imagen */
+    }
+  
+    .text {
+      width: 45%; /* Ajusta el ancho del texto */
+    }
+  }
