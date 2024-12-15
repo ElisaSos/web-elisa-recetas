@@ -39,6 +39,7 @@ nav ul li a {
     align-items: center;
     justify-content: space-between;
     box-shadow: #4b4141;
+   
 }
 nav ul li a :hover {
 background-color: #c5b8b8;;
@@ -60,6 +61,7 @@ nav ul form button { /* Combina los estilos para el enlace y el botón */
   background: none; /* Quita el fondo */
   border-radius: 0; /* Quita los bordes redondeados */
 }
+
 .boton-busqueda{
    padding: 17px 40px;
     border-radius: 50px;
@@ -324,34 +326,55 @@ footer{
   header {
     height: auto; /* Adjust height as needed */
     grid-template-columns: 1fr; /* Stack elements vertically */
+    position: static;
   }
 
   .row {
     flex-direction: column; /* Stack elements vertically */
+    position: static;
   }
-
-  .text, .content img {
-    /* Adjust width or other styles for smaller screens */
-  }
+  .text {
+    max-width: 80%; /* Adjust as needed */
+    font-size: 16px; 
+  justify-content: center;
+text-align: justify;
+}
   .cards-container {
     /* ... */
     margin: 0 auto;
 }
   .content img {
-    width: 100%;
-    height: auto; /* Ajusta la altura automáticamente */
+    display: none;
   }
+  nav {
+    width: auto;
+    flex-direction: row;
+    transform: none;
+  }
+
 }
 
 @media (max-width: 1199px) and (min-width: 768px) {
   /* Adjustments for medium screens */
 
-  header {
+header {
     /* Adjust styles for tablets */
+    align-items: center;
+    justify-content: space-between;
+    position: static;
   }
 
   .row {
     /* Adjust styles for tablets */
+    align-items: center;
+    justify-content: space-between;
+    position: static;
+  }
+  .text {
+    max-width: 80%; /* Adjust as needed */
+    font-size: 16px; 
+    justify-content: center;
+    text-align: justify;
   }
   .cards-container {
     /* ... */
@@ -360,5 +383,10 @@ footer{
   .content img {
     width: 100%;
     height: auto; /* Ajusta la altura automáticamente */
+  }
+  nav {
+    width: auto;
+    flex-direction: row;
+    transform: none;
   }
 }

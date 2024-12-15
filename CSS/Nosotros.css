@@ -64,17 +64,35 @@ footer{
 }
 
 /* Media query para pantallas medianas */
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 780px){
     .content {
       flex-direction: row; /* Volvemos a la disposición horizontal */
       justify-content: space-between;
     }
   
     .content img {
-      width: 45%; /* Ajusta el ancho de la imagen */
+      width: 25%; /* Ajusta el ancho de la imagen */
     }
   
     .text {
-      width: 45%; /* Ajusta el ancho del texto */
+     max-width: 150px; /* Ajusta el ancho del texto */
     }
+  }
+
+  @media (max-width: 150px){
+    .content {
+        flex-direction: row; /* Volvemos a la disposición horizontal */
+        justify-content: space-between;
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        height: auto; /* La altura se ajusta automáticamente */
+      }
+    
+      .content img {
+        width: 50%; /* Ajusta el ancho de la imagen */
+    
+      }
+    
+      .text {
+        height: auto; /* La altura se ajusta automáticamente */
+      }
   }
